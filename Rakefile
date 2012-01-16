@@ -1,5 +1,5 @@
 require 'rake'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 # Gem building
 begin
@@ -27,7 +27,7 @@ rescue LoadError
 end
 
 desc 'Generate documentation for flickr_fu.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
+RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'flickr_fu'
   rdoc.options << '--line-numbers' << '--inline-source'
