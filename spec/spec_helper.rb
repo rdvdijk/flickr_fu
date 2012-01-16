@@ -1,6 +1,4 @@
-require 'rubygems'
-gem 'rspec'
-require 'spec'
+require 'rspec'
  
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'flickr_fu'
