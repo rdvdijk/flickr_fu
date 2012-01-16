@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    flickr_fu (0.3.0)
+    flickr_fu (0.3.1)
+      flickr_fu
       mime-types (> 0.0.0)
       xml-magic (> 0.0.0)
 
