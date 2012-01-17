@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Ben Wyrosdick}, %q{Maciej Bilas}]
-  s.date = %q{2012-01-16}
+  s.date = %q{2012-01-17}
   s.description = %q{Provides a ruby interface to flickr via the REST api}
   s.email = %q{ben@commonthread.com}
   s.extra_rdoc_files = [
