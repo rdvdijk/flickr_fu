@@ -22,8 +22,8 @@ Jeweler::Tasks.new do |s|
   s.authors = ["Ben Wyrosdick", "Maciej Bilas"]
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]
-  s.add_dependency("mime-types", ["> 0.0.0"])
-  s.add_dependency("xml-magic", ["> 0.0.0"])
+#  s.add_dependency("mime-types", ["> 0.0.0"])
+#  s.add_dependency("xml-magic", ["> 0.0.0"])
 s.files.exclude("spec/spec.local.opts")
 end
 Jeweler::RubygemsDotOrgTasks.new
