@@ -5,6 +5,7 @@ demo*
 *~
 *.sw*
 .specification
+.bundle
 
 doc/rspec_report.html
 doc/rspec_profile.txt
