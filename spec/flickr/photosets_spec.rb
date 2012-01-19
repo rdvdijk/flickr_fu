@@ -6,6 +6,8 @@ describe Flickr::Photosets do
         "/../fixtures/flickr/photosets/get_list-0.xml")
     @get_photos_xml = File.read(File.dirname(__FILE__) +
         "/../fixtures/flickr/photosets/get_photos-0.xml")
+    @create_xml = File.read(File.dirname(__FILE__) +
+        "/../fixtures/flickr/photosets/create-0.xml")
   end
 
   before :each do
@@ -33,6 +35,7 @@ describe Flickr::Photosets do
     it "should call flick.photosets.create" do
       @flickr.should_receive(:send_request).with("flickr.photosets.create",
                                                  { :title => "new photoset", :primary_photo_id => 42 })
+      @flickr.stub!(:request_over_http).and_return(@create_xml)
       subject.create("new photoset", 42)
     end
   end
@@ -62,6 +65,7 @@ describe Flickr::Photosets do
      it "should call flickr.photosets.addPhoto" do
        @flickr.should_receive(:send_request).with("flickr.photosets.addPhoto",
                                                  { :photo_id => 43, :photoset_id => 4 })
+       @flickr.stub!(:request_over_http).and_return("")
        subject.add_photo(43)
      end
   end
