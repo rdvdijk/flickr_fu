@@ -136,11 +136,11 @@ And replace the line in the above sample to query on user id:
 
 ## Patch Contributers
 
-  Chris Ledet
-  Maciej Biłas
-  Mike Perham
-  Chris Anderton
-  Luke Francl
-  Thomas R. Koll
-  P. Mark Anderson
-  Josh Nichols
+- Chris Ledet
+- Maciej Biłas
+- Mike Perham
+- Chris Anderton
+- Luke Francl
+- Thomas R. Koll
+- P. Mark Anderson
+- Josh Nichols
