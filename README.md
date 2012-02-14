@@ -23,12 +23,12 @@
   http://rubydoc.info/gems/flickr_fu/
 
 ### Example flickr.yml
-<code>
+<pre>
 --- !map:HashWithIndifferentAccess
 key: "YOUR KEY"
 secret: "YOUR SECRET"
 token_cache: "token_cache.yml"
-</code>
+</pre>
 
 ### Authorization
 
@@ -46,14 +46,14 @@ If you have an invalid API key you will see errors such as:
   
 If you don't follow the process below to authorise your application you will see errors such as:
   
-<code>
+<pre>
 "98: Login failed / Invalid auth token" or 
 "99: User not logged in / Insufficient permissions"
-</code>
+</pre>
   
 ### Authorization Example for non-webapplication
 
-<code>
+<pre>
 require 'flickr_fu'
  
 flickr = Flickr.new('flickr.yml')
@@ -66,13 +66,13 @@ puts flickr.auth.url(:write)
 gets
   
 flickr.auth.cache_token
-</code>
+</pre>
 
 ### Authorization Example for a webapplication
 
 flickr.auth.token also contains the nsid and username, this example only stores the token and no other userdata.
 
-<code>
+<pre>
 require 'flickr_fu'
   class FlickrController < ActionController::Base
     def create
@@ -89,11 +89,11 @@ require 'flickr_fu'
       # now you have full access on the user's data :)
     end
 end
-</code>
+</pre>
 
 ### Search Example
 
-<code>
+<pre>
 require 'flickr_fu'
 
 flickr = Flickr.new('flickr.yml')
@@ -120,7 +120,7 @@ photos.each do |photo|
     puts
     puts
   end
-</code>
+</pre>
   
 ### Another Search Example
 
