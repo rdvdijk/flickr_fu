@@ -106,7 +106,14 @@ class Flickr::Photos::Photo
       f
     end
   end
-  
+ 
+  # Delete this photo
+  #
+  def delete()
+    @flickr.send_request('flickr.photos.delete', {:photo_id => self.id}, :post)
+    true
+  end
+ 
   # Add tags to a photo.
   # 
   # Params
