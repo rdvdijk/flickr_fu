@@ -30,9 +30,13 @@ class Flickr::Photos::Photo
   #  * size (Optional)
   #    the size of the size instance to return.  Optional sizes are:
   #       :square - square 75x75
+  #       :large_square - square 150x150
   #       :thumbnail - 100 on longest side
   #       :small - 240 on longest side
+  #       :small_320 - 320 on longest side
   #       :medium - 500 on longest side
+  #       :medium_640 - 640 on longest side
+  #       :medium_800 - 800 on longest side
   #       :large - 1024 on longest side (only exists for very large original images)
   #       :original - original image, either a jpg, gif or png, depending on source format
   # Examples
@@ -48,9 +52,13 @@ class Flickr::Photos::Photo
   # * size (Optional)
   #     the size of the image to return. Optional sizes are:
   #       :square - square 75x75
+  #       :large_square - square 150x150
   #       :thumbnail - 100 on longest side
   #       :small - 240 on longest side
+  #       :small_320 - 320 on longest side
   #       :medium - 500 on longest side
+  #       :medium_640 - 640 on longest side
+  #       :medium_800 - 800 on longest side
   #       :large - 1024 on longest side (only exists for very large original images)
   #       :original - original image, either a jpg, gif or png, depending on source format
   #
@@ -86,10 +94,14 @@ class Flickr::Photos::Photo
   #     name of the new file omiting the extention (ex. photo_1)
   # * size (Optional)
   #     the size of the image to return. Optional sizes are:
-  #       :small - square 75x75
+  #       :square - square 75x75
+  #       :large_square - square 150x150
   #       :thumbnail - 100 on longest side
   #       :small - 240 on longest side
+  #       :small_320 - 320 on longest side
   #       :medium - 500 on longest side
+  #       :medium_640 - 640 on longest side
+  #       :medium_800 - 800 on longest side
   #       :large - 1024 on longest side (only exists for very large original images)
   #       :original - original image, either a jpg, gif or png, depending on source format
   # 
@@ -282,9 +294,13 @@ class Flickr::Photos::Photo
   def size_key(size)
     case size.to_sym
     when :square then 's'
+    when :large_square then 'q'
     when :thumb, :thumbnail then 't'
     when :small then 'm'
+    when :small_320 then 'n'
     when :medium then ''
+    when :medium_640 then 'z'
+    when :medium_800 then 'c'
     when :large then 'b'
     when :original then 'o'
     else ''

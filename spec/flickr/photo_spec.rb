@@ -67,9 +67,13 @@ describe Flickr::Photos::Photo do
   describe ".image_url" do
     it "should return all standard sizes (thumbnail, square, small, medium and large) when requested" do
       @photo.image_url(:square).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_s.jpg"
+      @photo.image_url(:large_square).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_q.jpg"
       @photo.image_url(:thumbnail).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_t.jpg"
       @photo.image_url(:small).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_m.jpg"
+      @photo.image_url(:small_320).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_n.jpg"
       @photo.image_url(:medium).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027.jpg"
+      @photo.image_url(:medium_640).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_z.jpg"
+      @photo.image_url(:medium_800).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_c.jpg"
       @photo.image_url(:large).should == "http://farm4.static.flickr.com/3180/2984637736_9e5762e027_b.jpg"
     end
 
@@ -81,9 +85,13 @@ describe Flickr::Photos::Photo do
     it "should not call getSizes if not requested the url of the original image" do
       @flickr.should_not_receive(:request_over_http)
       @photo.image_url :square
+      @photo.image_url :large_square
       @photo.image_url :thumbnail
       @photo.image_url :small
+      @photo.image_url :small_320
       @photo.image_url :medium
+      @photo.image_url :medium_640
+      @photo.image_url :medium_800
       @photo.image_url :large
     end
 
