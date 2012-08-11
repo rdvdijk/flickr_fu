@@ -4,22 +4,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{flickr_fu}
-  s.version = "0.3.1"
+  s.name = "flickr_fu"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{Ben Wyrosdick}, %q{Maciej Bilas}]
-  s.date = %q{2012-01-17}
-  s.description = %q{Provides a ruby interface to flickr via the REST api}
-  s.email = %q{ben@commonthread.com}
-  s.extra_rdoc_files = [
-    "README"
-  ]
+  s.authors = ["Ben Wyrosdick", "Maciej Bilas"]
+  s.date = "2012-08-11"
+  s.description = "Provides a ruby interface to flickr via the REST api"
+  s.email = "ben@commonthread.com"
   s.files = [
     "Gemfile",
     "Gemfile.lock",
     "LICENSE",
-    "README",
+    "README.md",
     "Rakefile",
     "VERSION.yml",
     "flickr_fu.gemspec",
@@ -56,6 +53,7 @@ Gem::Specification.new do |s|
     "spec/fixtures/flickr/photos/get_sizes-0.xml",
     "spec/fixtures/flickr/photos/get_sizes-1.xml",
     "spec/fixtures/flickr/photos/licenses/get_info.xml",
+    "spec/fixtures/flickr/photosets/create-0.xml",
     "spec/fixtures/flickr/photosets/get_list-0.xml",
     "spec/fixtures/flickr/photosets/get_photos-0.xml",
     "spec/fixtures/flickr/test/echo-0.xml",
@@ -85,11 +83,11 @@ Gem::Specification.new do |s|
     "spec/spec.opts",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/commonthread/flickr_fu}
-  s.rdoc_options = [%q{--main}, %q{README}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.8}
-  s.summary = %q{Provides a ruby interface to flickr via the REST api}
+  s.homepage = "http://github.com/commonthread/flickr_fu"
+  s.rdoc_options = ["--main", "README"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = "1.8.24"
+  s.summary = "Provides a ruby interface to flickr via the REST api"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
