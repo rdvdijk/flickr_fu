@@ -15,7 +15,7 @@
   
 ## Installation
 
-  <code>sudo gem install flickr-fu</code>
+  <code>sudo gem install flickr_fu</code>
 
 ## Documentation
 
