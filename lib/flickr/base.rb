@@ -6,9 +6,9 @@ module Flickr
   class Base
     attr_reader :api_key, :api_secret, :token_cache, :token
     
-    REST_ENDPOINT = 'http://api.flickr.com/services/rest/'
-    AUTH_ENDPOINT = 'http://flickr.com/services/auth/'
-    UPLOAD_ENDPOINT = 'http://api.flickr.com/services/upload/'
+    REST_ENDPOINT = 'https://api.flickr.com/services/rest/'
+    AUTH_ENDPOINT = 'https://flickr.com/services/auth/'
+    UPLOAD_ENDPOINT = 'https://up.flickr.com/services/upload/'
     
     # create a new flickr object
     # 
@@ -141,7 +141,7 @@ module Flickr
     def request_over_http(options, http_method, endpoint)
       if http_method == :get
         api_call = endpoint + "?" + options.collect{|k,v| "#{k}=#{CGI.escape(v.to_s)}"}.join('&')
-        Net::HTTP.get(URI.parse(api_call))
+        URI.parse(api_call).read
       else
         Net::HTTP.post_form(URI.parse(endpoint), options).body
       end
